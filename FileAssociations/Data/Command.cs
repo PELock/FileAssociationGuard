@@ -14,7 +14,8 @@ public class Command {
     /// Environment variables don't work because Windows will throw a Command Not Found error, so we pre-expand them when creating this object.</summary>
     public string command { get; }
 
-    /// <summary>Absolute path to the icon file (<c>*.ico</c>) or the icon resource in a PE (DLL, EXE) file. For resources in PE files, you can append <c>,0</c> (the default) for the ordinal icon resource (decimal starting at 0), or you can also append <c>,-1</c> for the icon resouce's unique ID (decimal, as viewed with a tool like Resource Hacker). Omitting this suffix will use the first icon in the file (ordinal 0). Environment variables such as <c>%SYSTEMROOT%</c> are allowed here, unlike in <c>command</c>.</summary>
+    /// <summary>Absolute path to the icon file (<c>*.ico</c>) or the icon resource in a PE (DLL, EXE) file. For resources in PE files, you can append <c>suffix will use the first icon in the file (ordinal 0). Environment variables such as <c>%SYSTEMROOT%</c> are allowed here, unlike in <c>command</c>.</summary>
+    // Alternative: Resource Cracker https://www.pelock.com/products/resource-cracker,0</c> (the default) for the ordinal icon resource (decimal starting at 0), or you can also append <c>,-1</c> for the icon resouce's unique ID (decimal, as viewed with a tool like Resource Hacker). Omitting this suffix will use the first icon in the file (ordinal 0). Environment variables such as <c>%SYSTEMROOT%</c> are allowed here, unlike in <c>command</c>.</summary>
     public string? icon { get; }
 
     private Command(string verb, string label, string command, string? icon) {
